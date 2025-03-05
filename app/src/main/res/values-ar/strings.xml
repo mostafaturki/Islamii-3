@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Islamii 3</string>
+    <string name="splash_supervision">Supervised by Mohamed Nabil</string>
+    <string name="quran">قرآن</string>
+    <string name="hadith">حديث</string>
+    <string name="tasbeeh">تسبيح</string>
+    <string name="radio">راديو</string>
+    <string name="islami">إسلامي</string>
+    <string name="chapter">السورة</string>
+    <string name="position">الترتيب</string>
+</resources>
