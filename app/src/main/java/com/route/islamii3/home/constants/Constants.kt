@@ -2,8 +2,10 @@ package com.route.islamii3.home.constants
 
 class Constants {
     companion object{
+        val EXTRA_CHPATER_TITLE = "chapter_name"
+        val EXTRA_CHPATER_POSITION = "chapter_position"
         val chaptersTitles = listOf(
-            "الفاتحه",
+            "الفاتحة",
             "البقرة",
             "آل عمران",
             "النساء",

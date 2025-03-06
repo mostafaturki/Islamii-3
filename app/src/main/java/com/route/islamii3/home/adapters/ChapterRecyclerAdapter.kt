@@ -9,8 +9,10 @@ import com.route.islamii3.home.constants.Constants
 import com.route.islamii3.home.fragments.quran.Chapter
 import com.route.islamii3.home.fragments.quran.QuranFragment
 
-class ChapterRecyclerAdapter (private val chapters : List<String>)
+class ChapterRecyclerAdapter (private val chapters : List<Chapter>)
     : Adapter<ChapterRecyclerAdapter.ViewHolder>() {
+
+         var onItemClickListener: OnItemClickListener? = null
 
     class ViewHolder (val binding: ItemChapterBinding)
         : RecyclerView.ViewHolder(binding.root)
@@ -24,11 +26,22 @@ class ChapterRecyclerAdapter (private val chapters : List<String>)
     override fun getItemCount() = chapters.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.tvChapterName.text = Constants.chaptersTitles[position]
-        holder.binding.tvChapterPosition.text = "${position+1}"
+        val item = chapters.get(position)
+        holder.binding.tvChapterName.text = item.title
+        holder.binding.tvChapterPosition.text = item.position.toString()
+//        val title = holder.binding.tvChapterName
+//            title.text = Constants.chaptersTitles[position]
+//         val position= holder.binding.tvChapterPosition
+//             position = position+1
+
+        onItemClickListener?.let { listener ->
+            holder.binding.root.setOnClickListener {
+                listener.onItemClick(item,position)
+            }
+        }
     }
 
     fun interface OnItemClickListener {
-        fun onItemClick(title : String, position: Int)
+        fun onItemClick(chapter : Chapter, position: Int)
     }
 }

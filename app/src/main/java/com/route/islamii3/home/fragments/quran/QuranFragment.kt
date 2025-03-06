@@ -1,5 +1,6 @@
 package com.route.islamii3.home.fragments.quran
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.route.islamii3.R
 import com.route.islamii3.databinding.QuranFragmentBinding
 import com.route.islamii3.home.adapters.ChapterRecyclerAdapter
+import com.route.islamii3.home.cahpterContent.ChapterContentActivity
+import com.route.islamii3.home.constants.Constants
 
 class QuranFragment: Fragment() {
-    val chaptersTitles = listOf(
+ /*   val chaptersTitles = listOf(
         "الفاتحه",
         "البقرة",
         "آل عمران",
@@ -128,7 +131,10 @@ class QuranFragment: Fragment() {
         "الناس"
     )
 
+  */
+
         lateinit var binding: QuranFragmentBinding
+        lateinit var chapterTitles : MutableList<Chapter>
         lateinit var chaptersRecycler : RecyclerView
         lateinit var chaptersAdapter:ChapterRecyclerAdapter
 
@@ -148,7 +154,24 @@ class QuranFragment: Fragment() {
     }
     private fun initViews(view: View) {
         chaptersRecycler = view.findViewById(R.id.rv_chapters)
-        chaptersAdapter = ChapterRecyclerAdapter(chaptersTitles)
+        initList()
+        chaptersAdapter = ChapterRecyclerAdapter(chapterTitles)
         chaptersRecycler.adapter = chaptersAdapter
+        chaptersAdapter.onItemClickListener = object : ChapterRecyclerAdapter.OnItemClickListener {
+            override fun onItemClick(chapter: Chapter, position: Int) {
+                val intent = Intent(activity,ChapterContentActivity :: class.java)
+                intent.putExtra(Constants.EXTRA_CHPATER_TITLE,chapter.title)
+                intent.putExtra(Constants.EXTRA_CHPATER_POSITION,chapter.position)
+                startActivity(intent)
+            }
+
+        }
+    }
+
+    private fun initList() {
+        chapterTitles = mutableListOf()
+        Constants.chaptersTitles.forEachIndexed { index, item ->
+            chapterTitles.add(Chapter(item,index+1))
+        }
     }
 }
