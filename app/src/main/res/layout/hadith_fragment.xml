@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_hadith_header"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_hadith_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_horizontal_line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/Gold"
+        app:layout_constraintTop_toBottomOf="@id/iv_hadith_header" />
+
+    <TextView
+        android:id="@+id/tv_ahadeth"
+        style="@style/quranTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ahadeth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_horizontal_line1" />
+
+    <View
+        android:id="@+id/v_horizontal_line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/Gold"
+        app:layout_constraintTop_toBottomOf="@id/tv_ahadeth" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hadith"
+        style="@style/verses_rv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/v_horizontal_line2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_hadith" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

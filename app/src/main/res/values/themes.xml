@@ -3,7 +3,56 @@
     <style name="Base.Theme.Islamii3" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--                primary color                  -->
+        <item name="colorPrimary">@color/Gold</item>
+        <item name="colorPrimaryVariant">@color/Gold_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!--                secondary color                 -->
+        <item name="colorSecondary">@color/Gold</item>
+        <item name="colorSecondaryVariant">@color/Gold_variant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--                status bar color                  -->
+        <item name="android:statusBarColor">@color/Gold_variant</item>
     </style>
 
-    <style name="Theme.Islamii3" parent="Base.Theme.Islamii3" />
+
+    <style name="Islami">
+        <item name="android:textColor">@color/Gold</item>
+        <item name="font">@font/main_bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="navigation_menu">
+        <item name="android:background">@color/Gold</item>
+        <item name="itemIconSize">32dp</item>
+        <item name="itemIconTint">@color/nav_menu</item>
+        <item name="itemTextColor">@color/nav_menu</item>
+    </style>
+
+    <style name="splash">
+        <item name="android:background">@drawable/img_splash</item>
+    </style>
+
+    <style name="home">
+        <item name="android:background">@drawable/img_home_bg</item>
+    </style>
+
+    <style name="quranTitle">
+        <item name="android:textColor">@color/gold2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="quranContent">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="verses_rv_bg">
+        <item name="background">@drawable/verses_rv_shape</item>
+    </style>
+
 </resources>

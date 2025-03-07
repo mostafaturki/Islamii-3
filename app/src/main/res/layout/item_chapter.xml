@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/quran_fragment"
+    android:textDirection="rtl">
+
+
+    <TextView
+        android:id="@+id/tv_chapter_name"
+        style="@style/quranContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_chapter_position"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Chapter" />
+
+    <TextView
+        android:id="@+id/tv_chapter_position"
+        style="@style/quranContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_chapter_name"
+        app:layout_constraintTop_toTopOf="@id/tv_chapter_name"
+        tools:text="1" />
+
+    <View
+        android:id="@+id/v_horizontal_line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/Gold"
+        app:layout_constraintTop_toBottomOf="@id/tv_chapter_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
