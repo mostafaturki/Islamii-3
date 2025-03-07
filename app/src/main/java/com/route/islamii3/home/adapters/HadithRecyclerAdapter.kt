@@ -10,7 +10,7 @@ import com.route.islamii3.home.fragments.hadith.Hadith
 class HadithRecyclerAdapter (private val hadithList: List<Hadith>)
     : Adapter<HadithRecyclerAdapter.HadithViewHolder>(){
 
-        val onHadithClickListener:OnHadithClickListener? = null
+        var onHadithClickListener:OnHadithClickListener? = null
 
     class HadithViewHolder (val binding: ItemHadithBinding):ViewHolder(binding.root)
 

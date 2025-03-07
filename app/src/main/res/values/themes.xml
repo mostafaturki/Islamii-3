@@ -25,14 +25,15 @@
 
     <style name="navigation_menu">
         <item name="android:background">@color/Gold</item>
-        <item name="itemIconSize"> 32dp</item>
-        <item name= "itemIconTint">@color/nav_menu</item>
-        <item name= "itemTextColor">@color/nav_menu</item>
+        <item name="itemIconSize">32dp</item>
+        <item name="itemIconTint">@color/nav_menu</item>
+        <item name="itemTextColor">@color/nav_menu</item>
     </style>
 
     <style name="splash">
         <item name="android:background">@drawable/img_splash</item>
     </style>
+
     <style name="home">
         <item name="android:background">@drawable/img_home_bg</item>
     </style>

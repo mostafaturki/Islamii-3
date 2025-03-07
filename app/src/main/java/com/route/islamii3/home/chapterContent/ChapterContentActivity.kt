@@ -26,8 +26,8 @@ class ChapterContentActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolBar)
 
         supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(true);
-            setDisplayShowHomeEnabled(true);
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
         }
         title = null
         versesRecycler = binding.rvVerses
