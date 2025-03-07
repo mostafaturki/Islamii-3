@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.route.islamii3.R
 import com.route.islamii3.databinding.QuranFragmentBinding
 import com.route.islamii3.home.adapters.ChapterRecyclerAdapter
-import com.route.islamii3.home.cahpterContent.ChapterContentActivity
+import com.route.islamii3.home.chapterContent.ChapterContentActivity
 import com.route.islamii3.home.constants.Constants
 
 class QuranFragment: Fragment() {

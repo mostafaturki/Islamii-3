@@ -50,4 +50,8 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="verses_rv_bg">
+        <item name="background">@drawable/verses_rv_shape</item>
+    </style>
+
 </resources>

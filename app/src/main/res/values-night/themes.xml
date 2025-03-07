@@ -44,6 +44,10 @@
         <item name="android:textSize">20dp</item>
         <item name="android:gravity">center</item>
     </style>
-    
-    
+
+    <style name="verses_rv_bg">
+        <item name="background">@drawable/dark_verses_rv_shape</item>
+    </style>
+
+
 </resources>

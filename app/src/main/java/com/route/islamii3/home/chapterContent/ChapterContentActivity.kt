@@ -1,4 +1,4 @@
-package com.route.islamii3.home.cahpterContent
+package com.route.islamii3.home.chapterContent
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +23,13 @@ class ChapterContentActivity : AppCompatActivity() {
         }
 
     private fun initViews() {
+        setSupportActionBar(binding.toolBar)
+
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true);
+            setDisplayShowHomeEnabled(true);
+        }
+        title = null
         versesRecycler = binding.rvVerses
         versesRecycler.adapter = versesAdapter
     }
@@ -36,6 +43,11 @@ class ChapterContentActivity : AppCompatActivity() {
         val versesList: List<String> = assetsContent.split("\n")
         versesAdapter = VersesAdapter(versesList)
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
 }
