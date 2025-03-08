@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:background="@drawable/img_home_bg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sebha_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".18" />
+
+    <ImageView
+        android:id="@+id/iv_sebha_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_sebha_header"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sebha_guide"
+        app:layout_constraintWidth_percent=".12" />
+
+    <ImageView
+        android:id="@+id/iv_sebha_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_sebha_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_sebha_header"
+        app:layout_constraintWidth_percent=".7" />
+
+    <TextView
+        android:id="@+id/tv_tasbeeh_count"
+        style="@style/TasbeehTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tasbeeh_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_sebha_body" />
+
+    <TextView
+        android:id="@+id/tv_tasbeeh_counter"
+        style="@style/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_subhan_allah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tasbeeh_count"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="15dp"
+        tools:text="30" />
+
+    <TextView
+        android:id="@+id/tv_subhan_allah"
+        style="@style/tasbeeh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subhan_allah"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tasbeeh_counter" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

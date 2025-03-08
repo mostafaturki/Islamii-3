@@ -4,11 +4,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_80_percent">#CCFFFFFF</color>
     <color name="Gold">#B7935F</color>
+    <color name="Gold_20_percent">#33B7935F</color>
     <color name="gold2">#D0881E</color>
     <color name="Gold_variant">#816946</color>
+    <color name="Gold_variant_60_percent">#99816946</color>
     <color name="dark_blue">#141A2E</color>
+    <color name="dark_blue_60_percent">#99141A2E</color>
     <color name="dark_blue_80_percent">#CC141A2E</color>
     <color name="dark_blue_variant">#0E1221</color>
+    <color name="dark_blue_variant_20_percent">#330E1221</color>
     <color name="transparent">#00000000</color>
     <color name="yellow">#FACC1D</color>
 </resources>
