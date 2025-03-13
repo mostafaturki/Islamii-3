@@ -9,6 +9,12 @@
     <string name="chapter">Chapter</string>
     <string name="position">Position</string>
     <string name="ahadeth">Ahadeth</string>
-    <string name="subhan_allah">Subhan Allah</string>
+    <array name="azkarList">
+        <item>Subhan Allah</item>
+        <item>Alhamdullah</item>
+        <item>La Elah Ella Allah</item>
+        <item>Allah Akbar</item>
+    </array>
     <string name="tasbeeh_count">Tasbeeh Count</string>
+    <string name="zekr">Zekr</string>
 </resources>
